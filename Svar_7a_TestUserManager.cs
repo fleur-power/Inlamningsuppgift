@@ -9,14 +9,14 @@ namespace Svar_7a_Test
         [Fact]
         public void ChangePassword_ShouldReturnTrueForCorrectParameters()
         {
-            // arrange:
-            string correctUsername = "apa";
+            //Â arrange:
+            stringÂ correctUsernameÂ =Â "apa";
             string correctOldPassword = "bepa";
             UserManager um = new UserManager(correctUsername, correctOldPassword);
-            string correctNewPassword = "cepa"; 
-            // act:  
-            bool result = um.ChangePassword(correctUsername,  correctOldPassword, correctNewPassword); 
-            // assert:
+            stringÂ correctNewPasswordÂ =Â "cepa";Â 
+            //Â act:Â  
+            boolÂ resultÂ =Â um.ChangePassword(correctUsername,Â  correctOldPassword,Â correctNewPassword);Â 
+            //Â assert:
             Assert.True(result);
         }
     }

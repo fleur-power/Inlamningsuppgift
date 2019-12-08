@@ -12,27 +12,27 @@ namespace Svar_8a_Test
         [Fact]
         public void Deposit_ShouldReturnTrueAtSuccess()
         {
-            // arrange
+            //Â arrange
             double amount = 1.0;
-            BankAccount account = new BankAccount();  // a zero balance at creation
+            BankAccount account = new BankAccount();  //Â aÂ zeroÂ balanceÂ at creation
 
-            // Assert.True(account != null); ?
+            // Assert.True(accountÂ !=Â null); ?
 
-            // act
+            //Â act
             bool result = account.Deposit(amount);
 
-            // assert 
+            //Â assertÂ 
             Assert.True(result);
         }
 
         [Fact]
         public void Deposit_ShouldReturnFalseAtFail()
         {
-            // arrange
-            double amount = -1.0;                      // a forbidden value (?)
+            //Â arrange
+            double amount = -1.0;                      //Â aÂ forbiddenÂ valueÂ (?)
             BankAccount account = new BankAccount();
 
-            // act
+            //Â act
             bool result = account.Deposit(amount);
 
             // assert
@@ -44,30 +44,30 @@ namespace Svar_8a_Test
         [Fact]
         public void Withdraw_ShouldReturnTrueAtSuccess()
         {
-            // arrange
+            //Â arrange
             double amount = 1.0;
             BankAccount account = new BankAccount();
 
-            // act
-            bool result = account.Withdraw(amount);    // ensure that we have funds to withdraw
+            //Â act
+            bool result = account.Withdraw(amount);    //Â ensureÂ thatÂ weÂ haveÂ fundsÂ toÂ withdraw
 
             // Assert.True(account.Deposit(amount));
 
-            // assert
+            //Â assert
             Assert.True(result);
         }
 
         [Fact]
         public void Withdraw_ShouldReturnFalseAtFail()
         {
-            // arrange
-            double amount = -1.0;                      // a forbidden value (?)
-            BankAccount account = new BankAccount();            
+            //Â arrange
+            double amount = -1.0;                      //Â aÂ forbiddenÂ valueÂ (?)
+            BankAccount accountÂ =Â newÂ BankAccount();            
             
-            // act            
-            bool result = account.Withdraw(amount);  
+            //Â act            
+            boolÂ resultÂ =Â account.Withdraw(amount);Â  
             
-            // assert
+            //Â assert
             Assert.False(result);  // Assert.True(!result);
         }
     } 
